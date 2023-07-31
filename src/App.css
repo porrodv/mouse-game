@@ -1,0 +1,153 @@
+body {
+  background-color: rgb(49, 49, 49);
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  margin: 0;
+  overflow: hidden;
+}
+*{
+  box-sizing: border-box;
+}
+button{
+  border: none;
+  font-weight: 500;
+  font-family: inherit;
+  color: #eee;
+  cursor: pointer;
+}
+button:focus{
+  outline: none !important;
+}
+
+.no-cursor {
+  cursor: none;
+}
+
+.container {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left,
+.right{
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.left .timer h2{
+  font-size: 30px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: rgb(74, 72, 72);
+  border: 3px solid rgb(61, 61, 64);
+}
+
+.diff{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(209, 212, 20);
+}
+
+.settings-icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.settings-icon:hover {
+  transform: scale(1.2);
+}
+.settings-icon.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.game-active-btn {
+  background-color: #2424cf;
+  border-radius: 8px;
+  height: 50px;
+  width: 120px;
+  transition: 0.15s;
+  font-size: 20px;
+}
+.game-active-btn:hover{
+  border-color: #27278c;
+  background-color: #27278c;
+}
+body.no-cursor .game-active-btn,
+body.no-cursor .settings-icon{
+  cursor: none;
+}
+
+.game-zone {
+  background-color: rgb(53, 54, 64);
+  outline: 4px solid rgb(64, 64, 205);
+  min-width: calc(100vw - 80px);
+  min-height: calc(100vh - 180px);
+  max-width: 1000px;
+  max-height: 500px;
+}
+
+.info-zone{
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3;
+  margin-bottom: 0.8rem;
+}
+.info-zone h2{
+  margin: 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 610px) {
+  .info-zone {
+    max-width: calc(100vw - 80px);
+    min-height: auto;
+    max-height: 90%;
+    box-sizing: border-box;
+  }
+  .left{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.3rem;
+    justify-items: center;
+ }
+  .left .game-active-btn{
+    grid-column: span 2;
+    width: 100%;
+  }
+  .right {
+    font-size: 15px;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .right .stars{
+    width: 100%;
+    display: flex;
+    gap: 3px;
+  }
+  .right .diff h2{
+    display: none;
+  }
+}
+@media screen and (max-width: 790px) {
+  .left {
+    gap: 0.4rem;
+  }
+  .right .diff h2{
+    display: none;
+  }
+}

@@ -1,0 +1,86 @@
+.modal {
+  color: rgb(32, 31, 31);
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+
+  animation: easeIn 0.3s forwards;
+}
+.modal__inner {
+  position: absolute;
+  top: -20%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: auto;
+  min-height: auto;
+  max-width: 60%;
+  max-height: 80%;
+  margin: auto;
+  overflow: auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 1em 2em;
+
+  animation: downfall 0.3s forwards;
+}
+.modal__bg {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal__close {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 1.1em;
+  height: 1.1em;
+  cursor: pointer;
+}
+.modal__close:after,
+.modal__close:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 1.5em;
+  background: #ccc;
+  display: block;
+  transform: rotate(45deg);
+  left: 50%;
+  margin: -3px 0 0 -1px;
+  top: 0;
+}
+.modal__close:hover:after,
+.modal__close:hover:before {
+  background: #aaa;
+}
+.modal__close:before {
+  transform: rotate(-45deg);
+}
+
+@keyframes easeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes downfall {
+  0% { top: -20%; }
+  100% { top: 0; }
+}
+
+@media screen and (max-width: 768px) {
+  .modal__inner {
+    min-width: auto;
+    max-width: 90%;
+    min-height: auto;
+    max-height: 90%;
+    box-sizing: border-box;
+  }
+}

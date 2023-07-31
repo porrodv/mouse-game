@@ -1,0 +1,32 @@
+.finish-container {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+}
+.finish-container h3 {
+  margin: 0;
+}
+
+.finish-container .title {
+  margin-bottom: 3rem;
+}
+
+.finish-container .points {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  min-height: auto;
+  max-height: 120px;
+  overflow: hidden;
+}
+.finish-container .points p {
+  margin: 0;
+}
+.finish-container .points .user-points {
+  font-size: 5.5rem;
+  color: rgb(37, 37, 209);
+}
+.finish-container .points .total-possible-points {
+  font-size: 3rem;
+  color: rgb(108, 74, 195);
+}

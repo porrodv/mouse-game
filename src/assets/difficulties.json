@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Fácil",
+    "difficultyStars": 1,
+    "milisecondsInterval": 1500,
+    "circleSize": 150,
+    "circleDescription": "Normales"
+  },
+  {
+    "id": 2,
+    "name": "Intermedio",
+    "difficultyStars": 2,
+    "milisecondsInterval": 1000,
+    "circleSize": 100,
+    "circleDescription": "Normales"
+  },
+  {
+    "id": 3,
+    "name": "Difícil",
+    "difficultyStars": 3,
+    "milisecondsInterval": 500,
+    "circleSize": 100,
+    "circleDescription": "Pequeños"
+  }
+]
