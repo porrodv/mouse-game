@@ -2,18 +2,16 @@ import '../css/SettingsModal.css';
 import { CustomModal } from './CustomModal';
 import { useEffect, useState } from 'react';
 
+import difficulties from '../data/difficulties.json';
+
 export function SettingsModal ({ id, onSelect, onModalToggle }) {
   const starIcon = 'star-icon fa fa-solid fa-star';
   const downArrowIcon = 'down-arrow-icon fa fa-solid fa-arrow-down';
 
-  const [gameSettings, setGameSettings] = useState(null);
+  const [gameSettings, setGameSettings] = useState([]);
 
   useEffect(() => {
-    fetch('./src/assets/difficulties.json')
-      .then((res) => res.json())
-      .then((json) => {
-        setGameSettings(json);
-      });
+    setGameSettings(difficulties);
   }, []);
 
   const handleClick = (item) => {

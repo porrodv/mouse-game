@@ -5,6 +5,8 @@ import { CursorCircle } from './components/CursorCircle';
 import { SettingsModal } from './components/SettingsModal';
 import { FinishModal } from './components/FinishModal';
 
+import settingsIcon from './assets/settings.svg';
+
 function App () {
   const localStorageKey = 'userRecords';
   const timerSeconds = 10;
@@ -204,7 +206,6 @@ function App () {
   };
 
   const handleShowSettingsModal = (isOpen) => {
-    s;
     setShowSettingsModal(isOpen);
   };
 
@@ -236,7 +237,7 @@ function App () {
             </div>
             <img
               className={`settings-icon ${gameActive ? 'disabled' : ''}`}
-              src='./assets/settings.svg'
+              src={settingsIcon}
               alt='settings'
               onClick={!gameActive ? handleSettingsModal : null}
             />
