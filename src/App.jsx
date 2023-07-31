@@ -204,6 +204,7 @@ function App () {
   };
 
   const handleShowSettingsModal = (isOpen) => {
+    s;
     setShowSettingsModal(isOpen);
   };
 
@@ -235,7 +236,7 @@ function App () {
             </div>
             <img
               className={`settings-icon ${gameActive ? 'disabled' : ''}`}
-              src='./src/assets/settings.svg'
+              src='./assets/settings.svg'
               alt='settings'
               onClick={!gameActive ? handleSettingsModal : null}
             />
